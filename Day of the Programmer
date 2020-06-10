@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+int main(){
+    int n,dd,mm,yy;
+    scanf("%d",&n);
+
+    if(n>=1700 && n<=1917){
+        if(n%4==0){
+            dd = 12;
+            mm = 9;
+            yy = n;
+            printf("%d.%02d.%d",dd,mm,yy);
+        }
+        else{
+            dd = 13;
+            mm = 9;
+            yy = n;
+            printf("%d.%02d.%d",dd,mm,yy);
+        }
+    }
+    else if(n>1918){
+        if((n%400==0) || (n%4==0 && n%100!=0)){
+            dd = 12;
+            mm = 9;
+            yy = n;
+            printf("%d.%02d.%d",dd,mm,yy);
+        }
+        else{
+            dd = 13;
+            mm = 9;
+            yy = n;
+            printf("%d.%02d.%d",dd,mm,yy);
+        }
+
+    }
+    else if(n==1918){
+        dd = 26;
+        mm = 9;
+        yy = n;
+        printf("%d.%02d.%d",dd,mm,yy);
+    }
+return 0;
+}
